@@ -3,14 +3,14 @@ import './App.css'
 import Dropdown from './components/Dropdown';
 
 function App() {
-  const [selectedItemsSingle, setSelectedSingle] = useState(new Set<String>());
-  const [selectedItemsMulti, setSelectedMulti] = useState(new Set<String>());
+  const [selectedItemsSingle, setSelectedSingle] = useState(new Set<string>());
+  const [selectedItemsMulti, setSelectedMulti] = useState(new Set<string>());
 
   const handleSelectSingle = (selection:string) => {
     if (selectedItemsSingle.has(selection)) {
       return;
     }
-    const newSelected = new Set<String>();
+    const newSelected = new Set<string>();
     newSelected.add(selection);
     setSelectedSingle(newSelected);
   }
@@ -19,13 +19,13 @@ function App() {
     if (!selectedItemsSingle.has(selection)) {
       return;
     }
-    const newSelected = new Set<String>(selectedItemsSingle);
+    const newSelected = new Set<string>(selectedItemsSingle);
     newSelected.delete(selection);
     setSelectedSingle(newSelected);
   }
 
   const handleClearSingle = () => {
-    const newSelected = new Set<String>();
+    const newSelected = new Set<string>();
     setSelectedSingle(newSelected);
   }
 
@@ -34,13 +34,13 @@ function App() {
       return;
     }
 
-    const newSelected = new Set<String>(selectedItemsMulti);
+    const newSelected = new Set<string>(selectedItemsMulti);
     newSelected.add(selection);
     setSelectedMulti(newSelected);
   }
 
   const handleSelectMany = (selections:string[]) => {
-    const newSelected = new Set<String>([...selectedItemsMulti]);
+    const newSelected = new Set<string>([...selectedItemsMulti]);
 
     selections.forEach(selection => {
       newSelected.add(selection);
@@ -53,13 +53,13 @@ function App() {
     if (!selectedItemsMulti.has(selection)) {
       return;
     }
-    const newSelected = new Set<String>(selectedItemsMulti);
+    const newSelected = new Set<string>(selectedItemsMulti);
     newSelected.delete(selection);
     setSelectedMulti(newSelected);
   }
 
   const handleClearMulti = () => {
-    const newSelected = new Set<String>();
+    const newSelected = new Set<string>();
     setSelectedMulti(newSelected);
   }
 
