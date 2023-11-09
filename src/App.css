@@ -1,0 +1,126 @@
+/* Colours: https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors*/
+:root {
+  font-family: Arial;
+  color: #212121;
+}
+
+.dropdown {
+  font-size: 1rem;
+  position: relative;
+}
+
+.dropdown-list {
+  position: absolute;
+  width:100%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  display:flex nowrap;
+  padding:0;
+  max-height:200px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  z-index: 99;
+  background: white;
+}
+
+.dropdown-list::-webkit-scrollbar {
+  width: 10px;
+}
+
+.dropdown-list::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color of the track (the area behind the scrollbar) */
+}
+
+.dropdown-list::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the thumb (the draggable part of the scrollbar) */
+  border-radius: 6px; /* Radius of the thumb corners */
+}
+
+.dropdown-list::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color of the thumb on hover */
+}
+
+.dropdown-list ul {
+  list-style-type: none;
+  margin:0;
+  padding:0;
+}
+
+.dropdown-list li {
+  padding: 15px
+}
+
+.dropdown-list li:hover {
+  background-color: #EEEEEE
+}
+
+.dropdown-display {
+  border: 2px solid #BDBDBD;
+  border-radius: 5%;
+  padding: 12px;
+  padding-right: 30px;
+}
+
+.dropdown-display-selected {
+  border: 2px solid #1565C0 !important;
+}
+
+.dropdown-display-label {
+  position: absolute;
+  top: -7px;
+  background: white;
+  font-size: 0.75rem;
+  padding: 0 2px 0 2px;
+  text-align: center;
+}
+
+.dropdown-display-label-selected {
+  color: #1565C0 !important;
+}
+
+.dropdown-display-text {
+  color: #212121;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dropdown-display-placeholder {
+  color: #424242;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dropdown-display-clear {
+  position: absolute;
+  right: 20px;
+  top:13px;
+  cursor:pointer;
+}
+
+.dropdown-option {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.multi-dropdown-option img {
+  display: inline-block;
+  position: relative;
+  top:2px;
+  margin-right:5px;
+}
+
+.multi-dropdown-option img {
+  height:16px;
+  width:16px;
+}
+.option-selected {
+  background-color: #BBDEFB !important;
+}
+
+.multi-dropdown-select-all {
+  color: blue;
+  cursor:pointer;
+  text-decoration: underline;
+}
